@@ -1,0 +1,19 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
+    gap: 20px; /* Espaçamento entre os produtos */
+    padding: 20px;
+    justify-items: center; /* Centraliza os itens na coluna */
+}
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+}
