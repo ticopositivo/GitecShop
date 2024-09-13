@@ -34,6 +34,12 @@ const products = [
         title: 'Processador AMD Ryzen 7 5700X3D, 3.6 GHz, (4.1GHz Max Turbo), Cachê 4MB, 8 Núcleos, 16 Threads, AM4',
         price: 'R$ 1.349,99 à vista ou 10x de R$ 149,99 sem juros',
     },
+    {
+        id: '5',
+        image: '/src/assets/products/product5.png',
+        title: 'Processador AMD Ryzen 7 5700X3D, 3.6 GHz, (4.1GHz Max Turbo), Cachê 4MB, 8 Núcleos, 16 Threads, AM4',
+        price: 'R$ 1.349,99 à vista ou 10x de R$ 149,99 sem juros',
+    },
     // Adicione mais produtos conforme necessário
 ];
 
