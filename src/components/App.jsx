@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header.jsx';
 import SearchBar from './SearchBar.jsx';
 import ProductGrid from './ProductGrid.jsx';
 import Footer from './Footer.jsx';
 import Slideshow from './Slideshow.jsx';
-
 
 const products = [
     {
@@ -61,15 +60,21 @@ const products = [
         title: 'Placa Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4',
         price: 'R$ 897,88 à vista ou 10x de R$ 94,51 sem juros',
     },
-    // Adicione mais produtos conforme necessário
+    // adicione mais produtos conforme necessário
 ];
 
 export default function App() {
+    const [cart, setCart] = useState([]);
+    // Função para adicionar produto ao carrinho
+    const addToCart = (product) => {
+        setCart([...cart, product]);
+    };
     return (
         <div>
-            <Header />
+            <Header cartCount={cart.length} />
             <SearchBar />
-            <ProductGrid products={products} />
+            <Slideshow products={products} />
+            <ProductGrid products={products} addToCart={addToCart} />
             <Footer />
         </div>
     );
