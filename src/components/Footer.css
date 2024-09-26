@@ -1,16 +1,53 @@
 .footer {
-    background-color: #fff5f5f5;
-    color: rgb(12, 0, 0);
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 15px 0;
-    position: relative; /* Para fazer o rodapé rolar com o conteúdo */
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.social-icons a, .payment-icons svg {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover, .payment-icons svg:hover {
+    color: #FFD700; /* Cor dourada ao passar o mouse */
+}
+
+/* Estilo para o logo do Pix */
+.pix-icon {
+    width: 24px; /* Mesmo tamanho dos outros ícones */
+    height: auto;
+    filter: brightness(0) invert(1); /* Aplica filtro para deixar a imagem branca */
+    margin-left: 10px;
+}
+
+.contact-info {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info svg {
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .footer p {
-    margin: 0;
+    margin-top: 20px;
+    font-size: 14px;
 }
-

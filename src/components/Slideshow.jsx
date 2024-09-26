@@ -1,38 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import './Slideshow.css';
 
-const Slideshow = ({ products }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const slides = [
+    '/src/assets/products/slide1.png',
+    '/src/assets/products/slide2.png',
+    '/src/assets/products/slide3.png',
+    '/src/assets/products/slide4.png',
+    '/src/assets/products/slide5.png',
+];
+
+export default function Slideshow() {
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === products.length - 1 ? 0 : prevIndex + 1
-            );
-        }, 3000); // Muda a cada 3 segundos
-        return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
-    }, [products]);
+            setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+        }, 3000); // Muda o slide a cada 3 segundos
+
+        return () => clearInterval(interval); // Limpa o intervalo quando o componente é desmontado
+    }, []);
 
     return (
         <div className="slideshow-container">
-            {products.map((product, index) => (
-                <div
-                    key={product.id}
-                    className={`slide ${index === currentIndex ? 'active' : ''}`}
-                >
-                    {index === currentIndex && (
-                        <>
-                            <img src={product.image} alt={product.title} className="slide-image" />
-                            <div className="slide-info">
-                                <h2>{product.title}</h2>
-                                <p>{product.price}</p>
-                            </div>
-                        </>
-                    )}
-                </div>
+            {slides.map((slide, index) => (
+                <img
+                    key={index}
+                    src={slide}
+                    alt={`Slide ${index + 1}`}
+                    className={`slide ${index === currentSlide ? 'active' : ''}`}
+                />
             ))}
         </div>
     );
-};
-
-export default Slideshow;
+}
