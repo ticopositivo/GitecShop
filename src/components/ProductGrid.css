@@ -1,19 +1,25 @@
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
-    gap: 20px; /* Espaçamento entre os produtos */
+    grid-template-columns: repeat(4, 1fr); /* Exibe 4 produtos por linha */
+    gap: 20px; /* Espaçamento entre os cards */
     padding: 20px;
-    justify-items: center; /* Centraliza os itens na coluna */
+    justify-content: center; /* Centraliza os produtos na página */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas médias */
+        grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 produtos por linha em telas menores */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .product-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 produtos por linha em telas pequenas */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Ajusta para 1 produto por linha em telas muito pequenas */
     }
 }

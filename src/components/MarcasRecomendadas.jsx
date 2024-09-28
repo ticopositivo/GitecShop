@@ -15,17 +15,14 @@ const marcas = [
 export default function MarcasRecomendadas() {
     return (
         <section className="marcas-recomendadas">
-            <div className="marcas-header">
-                <h2>👍 MARCAS RECOMENDADAS</h2>
-                <a href="#" className="ver-todas">VER TODAS &gt;</a>
-            </div>
-            <div className="marcas-grid">
+            <h2>Marcas Recomendadas</h2>
+            <div className="marcas-container">
                 {marcas.map((marca) => (
-                    <div key={marca.id} className="marca-item">
-                        <img src={marca.imgSrc} alt={marca.nome} className="marca-img" />
+                    <a key={marca.id} href={marca.url} className="marca-card">
+                        <img src={marca.imgSrc} alt={marca.nome} className="marca-imagem" />
                         <h3>{marca.nome}</h3>
-                        <a href={marca.url} className="ver-produtos">{marca.label}</a>
-                    </div>
+                        <p>{marca.label} <span aria-hidden="true">&gt;</span></p>
+                    </a>
                 ))}
             </div>
         </section>
