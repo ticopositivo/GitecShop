@@ -4,7 +4,9 @@
     background-color: #e6e6e6;
     border-radius: 5px;
     padding: 5px 10px;
-    margin: 10px;
+    margin: 10px auto; /* Centraliza a barra */
+    max-width: 600px; /* Limita a largura máxima */
+    width: 100%; /* Faz com que a barra ocupe 100% do espaço disponível */
 }
 
 .search-input {
@@ -16,4 +18,14 @@
 
 .search-icon {
     font-size: 20px;
+}
+
+@media (max-width: 640px) {
+    .search-bar {
+        max-width: 90%; /* Para telas menores, a barra ocupará 90% da largura da tela */
+    }
+
+    .search-icon {
+        font-size: 18px; /* Reduz o tamanho do ícone em telas pequenas */
+    }
 }

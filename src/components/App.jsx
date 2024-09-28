@@ -61,6 +61,24 @@ const products = [
         title: 'Placa Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4',
         price: 'R$ 897,88 à vista ou 10x de R$ 94,51 sem juros',
     },
+    {
+        id: '9',
+        image: '/src/assets/products/product9.png',
+        title: 'Placa Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4',
+        price: 'R$ 897,88 à vista ou 10x de R$ 94,51 sem juros',
+    },
+    {
+        id: '9',
+        image: '/src/assets/products/product9.png',
+        title: 'Placa Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4',
+        price: 'R$ 897,88 à vista ou 10x de R$ 94,51 sem juros',
+    },
+    {
+        id: '9',
+        image: '/src/assets/products/product9.png',
+        title: 'Placa Mãe Gigabyte B550M Aorus Elite, AMD AM4, Micro ATX, DDR4',
+        price: 'R$ 897,88 à vista ou 10x de R$ 94,51 sem juros',
+    },
     // Adicione mais produtos conforme necessário
 ];
 

@@ -1,13 +1,10 @@
 .product-card {
-    width: 100%; /* Ocupa 100% da coluna */
-    max-width: 300px; /* Limita a largura máxima do card */
-    margin: 0 auto; /* Centraliza os cards dentro de cada coluna */
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    width: 250px; /* Diminuir o tamanho do card */
+    margin: 10px; /* Adicionar espaçamento entre os produtos */
+    padding: 15px; /* Ajustar o padding interno */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Suavizar a sombra */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.2s ease-in-out;
 }
 
 .product-card:hover {
@@ -47,4 +44,12 @@
 
 .add-button:hover {
     background-color: #0056b3;
+}
+
+/* Ajustar espaçamento entre os cards na grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribui os produtos com espaçamento */
+    gap: 20px; /* Espaçamento entre os produtos */
 }
